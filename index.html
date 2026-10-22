@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Insight Co. · Estratégia digital que acende o seu negócio</title>
+<meta name="description" content="A estratégia que você precisa para impulsionar o seu negócio no digital e ampliar seu alcance. Sites e planejamento digital para empresas.">
+<meta name="theme-color" content="#F6F4E6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F2A2B" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Insight Co. · Estratégia digital">
+<meta property="og:description" content="A estratégia que você precisa para impulsionar o seu negócio no digital.">
+<meta property="og:image" content="og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Manrope:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+  // Tema antes de pintar: escolha salva (cordinha) ou o modo do aparelho.
+  try { var t = localStorage.getItem('insight-tema'); if (t) document.documentElement.dataset.tema = t; } catch (e) {}
+</script>
+</head>
+<body>
+
+<!-- Intro: a lâmpada se desenha, acende e a luz vira o fundo -->
+<div class="intro" id="intro" aria-hidden="true">
+  <svg class="intro-bulbo" viewBox="0 0 341 498" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path class="traco t1" d="M95 352 C70 318 22 268 22 178 C22 86 92 22 172 22 C254 22 320 88 320 176 C320 254 276 296 252 326 C242 340 238 352 238 360 L100 362"/>
+    <path class="traco t2" d="M138 340 L138 222 C138 200 102 190 102 168 C102 150 124 144 134 160 C144 176 140 208 140 224 M140 224 L206 224 M206 224 C206 208 202 176 212 160 C222 144 244 150 244 168 C244 190 208 200 208 222 L208 340"/>
+    <path class="traco t3" d="M102 398 L248 384 M100 436 L240 424 M140 474 C160 484 200 484 214 468"/>
+  </svg>
+  <span class="intro-luz"></span>
+</div>
+
+<!-- Fundo vivo: cone de luz e poeira de luz -->
+<div class="fundo" aria-hidden="true">
+  <span class="cone"></span>
+  <canvas id="poeira"></canvas>
+</div>
+
+<main class="pagina">
+
+  <!-- Topo: lâmpada pendurada com cordinha (puxe para trocar dia/noite) -->
+  <header class="topo" id="topo">
+    <div class="pendente" id="pendente">
+      <div class="lampada" id="lampada">
+        <span class="brilho" aria-hidden="true"></span>
+        <img src="bulbo.png" alt="Logo da Insight Co., uma lâmpada" width="341" height="498">
+      </div>
+      <button class="cordinha" id="cordinha" type="button" aria-label="Puxar a cordinha: trocar entre luz do dia e noite">
+        <span class="cordinha-linha"></span><span class="cordinha-ponta"></span>
+      </button>
+    </div>
+    <p class="dica-cordinha" id="dica-cordinha">puxe a cordinha</p>
+    <h1><span class="nome">Insight</span><span class="nome co">Co.</span></h1>
+    <a class="arroba" id="arroba" href="#" target="_blank" rel="noopener"></a>
+    <p class="frase" id="frase"></p>
+  </header>
+
+  <!-- Ações principais -->
+  <nav class="acoes" id="acoes" aria-label="Fale com a Insight Co."></nav>
+
+  <!-- Destaques que deslizam -->
+  <section class="destaques" id="destaques" aria-labelledby="t-destaques">
+    <div class="destaques-cab">
+      <h2 id="t-destaques">O que a gente <em>acende</em> no seu negócio</h2>
+      <span class="contador" id="contador" aria-live="polite"></span>
+    </div>
+    <div class="trilho" id="trilho" tabindex="0" aria-label="Serviços, deslize para ver"></div>
+  </section>
+
+  <!-- Informações -->
+  <section class="info" id="info" aria-label="Atendimento"></section>
+
+  <footer class="rodape">
+    <p>© <span id="ano"></span> Insight Co.</p>
+    <p><a href="privacidade.html">Privacidade</a> · <a href="#" data-abrir-cookies>Cookies</a> · Site por <a href="https://ders-site.vercel.app" target="_blank" rel="noopener">DERS</a></p>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+<script src="cookies.js"></script>
+</body>
+</html>

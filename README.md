@@ -12,7 +12,7 @@ o site segue o modo claro ou escuro do aparelho.
 - Fotos dos destaques: banco de imagens (Unsplash). Trocar pelas da Insight Co.
 - Textos dos 4 destaques (serviços), horário de atendimento e formas de pagamento.
 - A logo veio como captura de tela do celular: foi recortada e limpa. Pedir o arquivo original (PNG ou SVG).
-- Política de privacidade: texto de exemplo.
+- Mini Site não leva aviso de cookies nem termos/privacidade (regra de 23/10).
 
 ## Onde mexer
 - Conteúdo: arrays NEGOCIO, ACOES, DESTAQUES e INFO no topo do script.js.

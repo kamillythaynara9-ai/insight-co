@@ -162,25 +162,5 @@ em { font-style: normal; background: var(--degrade); -webkit-background-clip: te
   .fundo::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 15% 80%, rgba(110, 170, 166, .22), transparent 40%), radial-gradient(circle at 85% 70%, rgba(144, 187, 177, .22), transparent 40%); }
 }
 
-/* Aviso de cookies com a lâmpada */
-.cookies { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 40; max-width: 460px; margin: 0 auto;
-  background: var(--cartao); color: var(--texto); border-radius: 24px; padding: 18px; box-shadow: 0 20px 50px rgba(15, 42, 43, .3); animation: sobe .5s var(--mola) both; }
-.cookies-cab { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
-.cookies-cab img { width: 22px; filter: var(--bulbo-filtro); }
-.cookies h2 { font-family: var(--titulo); font-size: 1.05rem; margin: 0; }
-.cookies p { margin: 0 0 12px; font-size: .88rem; line-height: 1.45; color: var(--suave); }
-.cookies-acoes { display: flex; gap: 8px; flex-wrap: wrap; }
-.cookies-acoes button { flex: 1 1 auto; min-height: 44px; border-radius: 999px; border: 0; font-weight: 800; cursor: pointer; padding: 0 16px; background: var(--menta); color: var(--texto); }
-.cookies-acoes button.sim { background: var(--degrade); color: #fff; }
 @keyframes sobe { from { transform: translateY(30px); opacity: 0; } }
 
-/* Página de privacidade */
-.legal { max-width: 680px; margin: 0 auto; padding: 32px 20px 60px; position: relative; z-index: 1; line-height: 1.6; }
-.legal h1 { font-family: var(--titulo); letter-spacing: -.02em; }
-.legal h2 { font-family: var(--titulo); font-size: 1.15rem; margin-top: 26px; }
-.legal a { color: var(--agua-forte); font-weight: 700; }
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-  .entra { opacity: 1; transform: none; }
-}

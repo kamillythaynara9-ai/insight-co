@@ -162,5 +162,8 @@ em { font-style: normal; background: var(--degrade); -webkit-background-clip: te
   .fundo::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 15% 80%, rgba(110, 170, 166, .22), transparent 40%), radial-gradient(circle at 85% 70%, rgba(144, 187, 177, .22), transparent 40%); }
 }
 
-@keyframes sobe { from { transform: translateY(30px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .entra { opacity: 1; transform: none; }
+}
 
